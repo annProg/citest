@@ -23,6 +23,7 @@ steps:
   settings:
     repo: citest
     auto_tag: true
+    dry_run: true
   
 volumes:
 - name: tmp
