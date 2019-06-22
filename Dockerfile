@@ -1,9 +1,9 @@
 FROM golang:1.11 as builder
-RUN mkdir /go
+RUN mkdir /build
 COPY main.go /go
-WORKDIR /go
+WORKDIR /build
 RUN go build
 
 FROM alpine:3.10
-COPY --from=builde /go/main.go /
+COPY --from=builde /build/main.go /
 ENTRYPOINT ["/main.go"]
