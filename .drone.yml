@@ -10,12 +10,15 @@ steps:
   image: golang:1.11
   volumes:
   - name: tmp
-    path: /data
+    path: /build
   commands:
   - go test
-  - go build
+  - go build -o /build/main
 - name: build-image
   image: plugins/docker
+  volumes:
+  - name: tmp
+    path: /build
   settings:
     repo: citest
     auto_tag: true
