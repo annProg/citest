@@ -14,6 +14,7 @@ steps:
   commands:
   - go test
   - go build -o /build/main
+  - ls /build
 - name: build-image
   image: plugins/docker
   volumes:
