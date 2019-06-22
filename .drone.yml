@@ -14,6 +14,11 @@ steps:
   commands:
   - go test
   - go build
+- name: build-image
+  image: plugins/docker
+  settings:
+    repo: citest
+    auto_tag: true
   
 volumes:
 - name: tmp
