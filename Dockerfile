@@ -1,3 +1,3 @@
 FROM alpine:3.10
-COPY /build/main /
+COPY main /
 ENTRYPOINT ["/main"]
