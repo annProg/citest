@@ -9,13 +9,12 @@ steps:
 - name: build
   image: golang:1.11
   volumes:
-  - name: docker_sock
-    path: /var/run/docker.sock
+  - name: tmp
+    path: /data
   commands:
   - go test
   - go build
   
 volumes:
-- name: docker_sock
-  host:
-    path: /var/run/docker.sock
+- name: tmp
+  temp: {}
