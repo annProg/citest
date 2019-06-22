@@ -13,8 +13,8 @@ steps:
     path: /build
   commands:
   - go test
-  - go build -o /build/main
-  - ls /build
+  - go build
+  - ls
 - name: build-image
   image: plugins/docker
   volumes:
