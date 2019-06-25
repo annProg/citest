@@ -24,6 +24,9 @@ steps:
     repo: citest
     auto_tag: true
     dry_run: true
+  commands:
+  - echo "$PLUGIN_REPO"
+  - echo "$PLUGIN_AUTO_TAG"
   
 volumes:
 - name: tmp
