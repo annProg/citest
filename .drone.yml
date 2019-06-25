@@ -29,7 +29,7 @@ steps:
   commands:
   - echo "$PLUGIN_REPO"
   - echo "$PLUGIN_AUTO_TAG"
-  - echo "$PLUGIN_PASSWD"
+  - echo "$PLUGIN_PASSWORD"
   
 volumes:
 - name: tmp
