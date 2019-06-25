@@ -24,9 +24,12 @@ steps:
     repo: citest
     auto_tag: true
     dry_run: true
+    password:
+      from_secret: passwd
   commands:
   - echo "$PLUGIN_REPO"
   - echo "$PLUGIN_AUTO_TAG"
+  - echo "$PLUGIN_PASSWD"
   
 volumes:
 - name: tmp
