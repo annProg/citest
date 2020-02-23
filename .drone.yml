@@ -7,7 +7,7 @@ workspace:
 
 platform:
   os: linux
-  arch: amd64
+  arch: arm
 
 steps:
 - name: build
@@ -18,7 +18,7 @@ steps:
   commands:
   - go test
   - go build -o main
-  - ls
+  - file main
 - name: build-image
   image: plugins/docker
   volumes:
