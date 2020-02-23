@@ -5,6 +5,10 @@ workspace:
   base: /go
   path: src/github.com/annProg/citest
 
+platform:
+  os: linux
+  arch: amd64
+
 steps:
 - name: build
   image: golang:1.11
