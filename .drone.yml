@@ -25,4 +25,4 @@ steps:
     - sha1
   note: CHANGELOG.md
   when:
-    envent: tag
+    event: tag
