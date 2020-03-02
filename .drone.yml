@@ -14,24 +14,6 @@ steps:
   commands:
   - go test
   - go build -o citest
-  - file citest
-- name: build-image
-  image: plugins/docker
-  volumes:
-  - name: tmp
-    path: /build
-  settings:
-    repo: citest
-    auto_tag: true
-    dry_run: true
-    password:
-      from_secret: passwd
-  commands:
-  - echo "$PLUGIN_REPO"
-  - echo "$PLUGIN_AUTO_TAG"
-  - echo "$PLUGIN_PASSWORD"
-  - apk add --no-cache curl
-  - curl -s "https://api.annhe.net/testci/$PLUGIN_PASSWORD" -v
 
 - name: release
   image: plugins/github-release
@@ -44,7 +26,3 @@ steps:
   note: CHANGELOG.md
   when:
     envent: tag
-
-volumes:
-- name: tmp
-  temp: {}
