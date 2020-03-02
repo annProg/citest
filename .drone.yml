@@ -22,7 +22,8 @@ steps:
       from_secret: github_token
     files: citest
   checksum:
-    - sha1
+  - sha1
+  - md5
   note: CHANGELOG.md
   when:
     event: tag
