@@ -1,5 +1,4 @@
 # citest
-tets ci
-test
-test
-test pull request
+
+[![Build Status](https://ci.annhe.net/api/badges/annProg/citest/status.svg)](https://ci.annhe.net/annProg/citest)
+
