@@ -1,0 +1,26 @@
+name: Test Action
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: uname-a
+      run: uname -a
+    - name: uname-m
+      run: uname -m
+    - name: docker
+      run: docker version
+    - name: docker-info
+      run: docker info
+    - name: df
+      run: df -h
+    - name: free
+      run: free -m
+    - name: cpu
+      run: cat /proc/cpuinfo
