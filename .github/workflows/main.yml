@@ -34,7 +34,7 @@ jobs:
       run: |
         dd if=/dev/zero of=test_file_20MB bs=1M count=20
         ls -l
-        export ID=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/arm4rpi/pandoc-deps/releases/tags/v0.1" |grep '"id"' |head -n 1 |awk '{print $2}' |tr -d ','`
-        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: $(file -b --mime-type test_file_20MB)" "https://uploads.github.com/repos/arm4rpi/pandoc-deps/releases/$ID/assets?name=test_file_20MB" --data-binary @test_file_20MB
+        export ID=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/annProg/citest/releases/tags/v0.1" |grep '"id"' |head -n 1 |awk '{print $2}' |tr -d ','`
+        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: $(file -b --mime-type test_file_20MB)" "https://uploads.github.com/repos/annProg/citest/releases/$ID/assets?name=test_file_20MB" --data-binary @test_file_20MB
         exit $?
       
